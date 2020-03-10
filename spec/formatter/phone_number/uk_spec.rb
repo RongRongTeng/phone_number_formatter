@@ -43,7 +43,7 @@ RSpec.describe Formatter::PhoneNumber::UK do
           end
         end
 
-        context 'does not have 7 after prefix with 4411234 56789' do
+        context 'does not have 7 after prefix with 4401234 56789' do
           let(:number) { '4401234 56789' }
 
           it 'raises error' do
