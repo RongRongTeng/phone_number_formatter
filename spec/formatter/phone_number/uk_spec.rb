@@ -74,7 +74,7 @@ RSpec.describe Formatter::PhoneNumber::UK do
       end
 
       context 'contains invalid character' do
-        let(:number) { '4401234 bb6789' }
+        let(:number) { '+4471234 5678s' }
 
         it 'raises error' do
           expect { subject }
@@ -87,7 +87,7 @@ RSpec.describe Formatter::PhoneNumber::UK do
 
         it 'raises error' do
           expect { subject }
-            .to raise_error(Formatter::PhoneNumber::UK::InvalidPhoneNumber)
+            .to raise_error(Formatter::PhoneNumber::UK::InvalidPrefix)
         end
       end
     end
